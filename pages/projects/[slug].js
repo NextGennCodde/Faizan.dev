@@ -152,6 +152,10 @@ export default function Project({ project }) {
 export async function getStaticPaths() {
   // Sample project paths
   const projects = [
+    { slug: "bilal-marth" },
+    { slug: "hands-down-coffee" },
+    { slug: "utopia-streetwear" },
+    { slug: "kieri-homeware" },
     { slug: "amz-vision" },
     { slug: "helion" },
     { slug: "tumie" },
@@ -171,6 +175,54 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   // Sample project data
   const projectsData = {
+    "bilal-marth": {
+      title: "Bilal Marth (BM7) — Custom Store Redesign & AJAX Builder",
+      body: "For the prominent lifestyle and apparel brand BM7 by creator Bilal Marth, I developed a custom Shopify storefront redesign. The project focused on translating high-end, luxurious brand aesthetics into a high-performance e-commerce architecture. A key technical achievement was engineering a fully custom, zero-app AJAX gift-box builder within the cart drawer. This allowed customers to dynamically build custom packages with real-time price calculations, item counts, and automated discount applying, entirely bypassing third-party app subscriptions and ensuring lightning-fast load speeds.",
+      frontmatter: {
+        slug: "bilal-marth",
+        summary: "Developed a custom Shopify storefront redesign for prominent creator Bilal Marth, aligning styling, layout, and color schemas with the brand's luxurious identity. Engineered an interactive, zero-app AJAX gift-box builder within the cart drawer, handling multiple product additions, removals, and price calculations dynamically.",
+        image: "/Bilal-marth.png",
+        techStack: "Shopify (Liquid), AJAX Cart API, Javascript, CSS",
+        date: "2026-05-10",
+        deployLink: "https://bilalmarth7.pk"
+      }
+    },
+    "hands-down-coffee": {
+      title: "Hands Down Coffee — Shopify Store (Khaby Lame Brand)",
+      body: "Hands Down Coffee is a global, high-traffic coffee brand co-founded by international creator Khaby Lame. I engineered the fully bespoke Shopify 2.0 storefront from the ground up, designed to withstand massive global traffic spikes from social media launches. I built high-fidelity custom GreenSock (GSAP) animations for product discovery, integrated custom liquid layouts for variant selectors, and optimized images and scripts to deliver a premium, conversion-focused storefront. The results was an immersive, ultra-responsive storefront that perfectly showcases their signature Discovery Box.",
+      frontmatter: {
+        slug: "hands-down-coffee",
+        summary: "Engineered a fully bespoke Shopify 2.0 storefront from the ground up, designed to easily handle global viral traffic spikes from creator Khaby Lame. Crafted high-fidelity custom GSAP scroll-triggered animations and modular UI grids to deliver a premium, conversion-optimized storefront.",
+        image: "/hands-down-coffee.png",
+        techStack: "Shopify (Liquid), GSAP, Javascript, CSS",
+        date: "2026-04-15",
+        deployLink: "https://handsdowncoffee.com/"
+      }
+    },
+    "utopia-streetwear": {
+      title: "Utopia Streetwear — Premium Shopify Theme Development",
+      body: "Utopia Streetwear is a modern, high-impact fashion and apparel brand. I rebuilt and optimized their Shopify Online Store 2.0 storefront, focusing on a mobile-first, conversion-ready UI. By translating bold, experimental streetwear layouts from Figma designs into custom Liquid and performance-optimized CSS, I achieved a visually stunning brand experience. I implemented advanced collection filtering, customized image galleries, and smooth scroll transitions that significantly increased user session times and customer retention.",
+      frontmatter: {
+        slug: "utopia-streetwear",
+        summary: "Rebuilt and optimized the Shopify Online Store 2.0 storefront for Utopia Streetwear. Translated bold modern streetwear Figma layouts into custom Liquid sections, implemented advanced collection filtering, and created smooth micro-interactions that elevated brand identity and engagement.",
+        image: "/utopia-streetwear.png",
+        techStack: "Shopify (Liquid), Javascript, Vanilla CSS",
+        date: "2025-11-20",
+        deployLink: "https://utopiashop.ca/"
+      }
+    },
+    "kieri-homeware": {
+      title: "Kirei Homeware — Custom Japanese Homeware Shopify Store",
+      body: "Kirei Homeware is an Australian online brand specializing in premium, handcrafted Japanese homeware and ceramics. I completely rebuilt and launched their custom Online Store 2.0 storefront to optimize conversions and performance. By replacing multiple slow third-party Shopify apps with native Liquid components, custom AJAX workflows, and flexible metafields/metaobjects, I decreased overall page load times and eliminated recurring app subscription fees. I also implemented A/B tested checkout optimization, boosting the mobile conversion readiness of the store.",
+      frontmatter: {
+        slug: "kieri-homeware",
+        summary: "Rebuilt and launched a custom Shopify Online Store 2.0 storefront for Kirei Homeware. Replaced bulky, slow third-party apps with native Liquid, AJAX, and custom metafields/metaobjects, lowering page-load times, improving Core Web Vitals, and removing monthly subscription overhead.",
+        image: "/kieri-homeware.png",
+        techStack: "Shopify (Liquid), AJAX Cart API, Vanilla CSS",
+        date: "2025-02-15",
+        deployLink: "https://kireihomeware.com.au/"
+      }
+    },
     "amz-vision": {
       title: "Amz vision",
       body: "AmzVision is a creative studio and in-house agency specializing in elevating Amazon product listings through high-impact visuals and strategic content. This project showcases modern web development techniques with smooth animations and responsive design.",

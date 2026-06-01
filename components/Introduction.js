@@ -131,7 +131,7 @@ export default function Introduction({ introduction }) {
       >
         <Stack isInline spacing={4}>
           <Link
-            href="https://drive.google.com/file/d/1cA-kvbSmtBSYy5s_xg7zDTc9pjbxCzem/view?usp=sharing"
+            href="https://drive.google.com/file/d/12Lgq_6E0Jc_kkGXHz0Fbzt1OprkwRVgy/view?usp=drive_link"
             isExternal
             onClick={() => handleClick('contact_resume')}
           >

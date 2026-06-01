@@ -119,7 +119,58 @@ export async function getStaticProps() {
   // Sample projects data
   const projects = {
     edges: [
-     
+      {
+        post: {
+          title: "Bilal Marth (BM7) — Custom Store Redesign & AJAX Builder",
+          frontmatter: {
+            slug: "bilal-marth",
+            summary: "Developed a custom Shopify storefront redesign for prominent creator Bilal Marth, aligning styling, layout, and color schemas with the brand's luxurious identity. Engineered an interactive, zero-app AJAX gift-box builder within the cart drawer, handling multiple product additions, removals, and price calculations dynamically.",
+            image: "/Bilal-marth.png",
+            techStack: "Shopify (Liquid), AJAX Cart API, Javascript",
+            date: "2026-05-10",
+            deployLink: "https://bilalmarth7.pk"
+          }
+        }
+      },
+      {
+        post: {
+          title: "Hands Down Coffee — Shopify Store (Khaby Lame Brand)",
+          frontmatter: {
+            slug: "hands-down-coffee",
+            summary: "Engineered a fully bespoke Shopify 2.0 storefront from the ground up, designed to easily handle global viral traffic spikes from creator Khaby Lame. Crafted high-fidelity custom GSAP scroll-triggered animations and modular UI grids to deliver a premium, conversion-optimized storefront.",
+            image: "/hands-down-coffee.png",
+            techStack: "Shopify (Liquid), GSAP, Javascript",
+            date: "2026-04-15",
+            deployLink: "https://handsdowncoffee.com/"
+          }
+        }
+      },
+      {
+        post: {
+          title: "Utopia Streetwear — Premium Shopify Theme Development",
+          frontmatter: {
+            slug: "utopia-streetwear",
+            summary: "Rebuilt and optimized the Shopify Online Store 2.0 storefront for Utopia Streetwear. Translated bold modern streetwear Figma layouts into custom Liquid sections, implemented advanced collection filtering, and created smooth micro-interactions that elevated brand identity and engagement.",
+            image: "/utopia-streetwear.png",
+            techStack: "Shopify (Liquid), Javascript, Vanilla CSS",
+            date: "2025-11-20",
+            deployLink: "https://utopiashop.ca/"
+          }
+        }
+      },
+      {
+        post: {
+          title: "Kirei Homeware — Custom Japanese Homeware Shopify Store",
+          frontmatter: {
+            slug: "kieri-homeware",
+            summary: "Rebuilt and launched a custom Shopify Online Store 2.0 storefront for Kirei Homeware. Replaced bulky, slow third-party apps with native Liquid, AJAX, and custom metafields/metaobjects, lowering page-load times, improving Core Web Vitals, and removing monthly subscription overhead.",
+            image: "/kieri-homeware.png",
+            techStack: "Shopify (Liquid), AJAX Cart API, Vanilla CSS",
+            date: "2025-02-15",
+            deployLink: "https://kireihomeware.com.au/"
+          }
+        }
+      },
       {
         post: {
           title: "Amz vision",

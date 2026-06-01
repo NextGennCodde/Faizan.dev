@@ -134,47 +134,47 @@ export async function getStaticProps() {
     data = {
       items: [
         {
-             fields: {
-               title: "Hands Down Coffee — Shopify Store (Khaby Lame Brand)",
-               slug: "hands-down-coffee",
-               description: "Developed and optimized the Shopify product experience for Hands Down Coffee, a global coffee brand by Khaby Lame. Worked on theme customization, product page layout, responsiveness, and performance to deliver a clean, conversion-focused storefront showcasing the Coffee Bag Discovery Box with a premium, minimal UI aligned to the brand identity.",
-               imageUrl: "/hands-down-coffee.jpg",
-               tags: ["Shopify (Liquid)", "GSAP" , "Javascript"],
-               order: 1,
-               deployLink: "https://handsdowncoffee.com/"
-             }
+          fields: {
+            title: "Bilal Marth (BM7) — Custom Store Redesign & AJAX Builder",
+            slug: "bilal-marth",
+            description: "Developed a custom Shopify storefront redesign for prominent creator Bilal Marth, aligning styling, layout, and color schemas with the brand's luxurious identity. Engineered an interactive, zero-app AJAX gift-box builder within the cart drawer, handling multiple product additions, removals, and price calculations dynamically.",
+            imageUrl: "/Bilal-marth.png",
+            tags: ["Shopify (Liquid)", "AJAX Cart API", "Javascript"],
+            order: 1,
+            deployLink: "https://bilalmarth7.pk"
+          }
         },
         {
           fields: {
-            title: "Altura Diamonds — Certificate Lookup & Product Deep-Link",
-            slug: "api-integration",
-            description: "Implemented a certificate search feature for Altura Diamonds that lets users enter a gem’s certificate number, queries the Nivoda GraphQL API, and immediately redirects to the matching product page. I built a secure Express backend (token auth, environment variables, CORS), integrated it with the Shopify frontend",
-            imageUrl: "/api-integration.png",
-            tags: ["REST API", "GraphQL", "Liquid"],
+            title: "Hands Down Coffee — Shopify Store (Khaby Lame Brand)",
+            slug: "hands-down-coffee",
+            description: "Engineered a fully bespoke Shopify 2.0 storefront from the ground up, designed to easily handle global viral traffic spikes from creator Khaby Lame. Crafted high-fidelity custom GSAP scroll-triggered animations and modular UI grids to deliver a premium, conversion-optimized storefront.",
+            imageUrl: "/hands-down-coffee.png",
+            tags: ["Shopify (Liquid)", "GSAP", "Javascript"],
             order: 2,
-            deployLink: "https://alturadiamonds.com/pages/lab-grown-diamond-ring-design-studio?stage=Select+Setting"
+            deployLink: "https://handsdowncoffee.com/"
           }
         },
         {
           fields: {
-            title: "1090 — Custom Sections + Features",
-            slug: "1090",
-            description: "For 1090.co.uk, I developed custom Shopify theme enhancements using Liquid, JavaScript, and CSS to elevate the user experience. I added dynamic price and discount displays, responsive product sliders, and real-time shipping date features. I built modular, editable theme sections so the client can easily manage content without developer intervention, while ensuring seamless integration and optimal performance across devices.",
-            imageUrl: "/1090.png",
-            tags: ["Shopify", "Liquid", "Javascript"],
+            title: "Utopia Streetwear — Premium Shopify Theme Development",
+            slug: "utopia-streetwear",
+            description: "Rebuilt and optimized the Shopify Online Store 2.0 storefront for Utopia Streetwear. Translated bold modern streetwear Figma layouts into custom Liquid sections, implemented advanced collection filtering, and created smooth micro-interactions that elevated brand identity and engagement.",
+            imageUrl: "/utopia-streetwear.png",
+            tags: ["Shopify (Liquid)", "Javascript", "Vanilla CSS"],
             order: 3,
-            deployLink: "https://www.1090.co.uk/"
+            deployLink: "https://utopiashop.ca/"
           }
-        } , 
+        },
         {
           fields: {
-            title: "Snocks Product Gallery — Dynamic Shopify Section with Metafields",
-            slug: "Snocks",
-            description: "Developed a custom Shopify product gallery for the Snocks store featuring image info bars fully controlled by metafields. This setup allows the client to easily update image details from the Shopify admin while maintaining a clean, responsive layout and smooth user experience.",
-            imageUrl: "/snocks.png",
-            tags: ["Liquid", "Javascript" , "Vanilla CSS"],
+            title: "Kirei Homeware — Custom Japanese Homeware Shopify Store",
+            slug: "kieri-homeware",
+            description: "Rebuilt and launched a custom Shopify Online Store 2.0 storefront for Kirei Homeware. Replaced bulky, slow third-party apps with native Liquid, AJAX, and custom metafields/metaobjects, lowering page-load times, improving Core Web Vitals, and removing monthly subscription overhead.",
+            imageUrl: "/kieri-homeware.png",
+            tags: ["Shopify (Liquid)", "AJAX Cart API", "Vanilla CSS"],
             order: 4,
-            deployLink: "https://snocks.com/de-ch/products/high-waist-leggings"
+            deployLink: "https://kireihomeware.com.au/"
           }
         }
       ]
