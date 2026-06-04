@@ -176,7 +176,7 @@ export async function getStaticProps({ params }) {
   // Sample project data
   const projectsData = {
     "bilal-marth": {
-      title: "Bilal Marth (BM7) — Custom Store Redesign & AJAX Builder",
+      title: "Bilal Marth (BM7) — Custom Store Redesign",
       body: "For the prominent lifestyle and apparel brand BM7 by creator Bilal Marth, I developed a custom Shopify storefront redesign. The project focused on translating high-end, luxurious brand aesthetics into a high-performance e-commerce architecture. A key technical achievement was engineering a fully custom, zero-app AJAX gift-box builder within the cart drawer. This allowed customers to dynamically build custom packages with real-time price calculations, item counts, and automated discount applying, entirely bypassing third-party app subscriptions and ensuring lightning-fast load speeds.",
       frontmatter: {
         slug: "bilal-marth",

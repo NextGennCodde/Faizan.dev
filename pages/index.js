@@ -135,7 +135,7 @@ export async function getStaticProps() {
       items: [
         {
           fields: {
-            title: "Bilal Marth (BM7) — Custom Store Redesign & AJAX Builder",
+            title: "Bilal Marth (BM7) — Custom Store Redesign",
             slug: "bilal-marth",
             description: "Developed a custom Shopify storefront redesign for prominent creator Bilal Marth, aligning styling, layout, and color schemas with the brand's luxurious identity. Engineered an interactive, zero-app AJAX gift-box builder within the cart drawer, handling multiple product additions, removals, and price calculations dynamically.",
             imageUrl: "/Bilal-marth.png",
