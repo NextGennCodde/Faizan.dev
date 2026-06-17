@@ -12,25 +12,20 @@ export default function Index({ introduction, projects, contactMe }) {
     <>
       <Container enableTransition={true}>
         <Head>
-          <title>Faizan Khalid - Frontend Engineer</title>
-          <meta content="Faizan Khalid - Frontend Engineer" name="title" />
-          <meta content="Fazi, Fazi website" name="keywords" />
+          <title>Faizan Khalid - Shopify Developer</title>
+          <meta content="Faizan Khalid - Shopify Developer" name="title" />
+          <meta content="Shopify developer, Shopify OS 2.0, custom Liquid, GSAP, Headless Commerce, Hydrogen, Khaby Lame, Bilal Marth, Pakistan" name="keywords" />
           <meta
-            content="Passionate frontend developer based in Pakistan, crafting digital experiences with modern web technologies"
+            content="Shopify Developer who built Khaby Lame's global storefront. Custom Liquid, GSAP animations, Python automation. 90+ PageSpeed scores on every store."
             name="description"
           />
-
           <meta content="website" property="og:type" />
           <meta content="faizankhalid.vercel.app" property="og:url" />
+          <meta content="Faizan Khalid - Shopify Developer" property="og:title" />
           <meta
-            content="Faizan Khalid - Frontend Developer"
-            property="og:title"
-          />
-          <meta
-            content="Passionate frontend developer based in Pakistan, crafting digital experiences with modern web technologies"
+            content="Shopify Developer who built Khaby Lame's global storefront. Custom Liquid, GSAP animations, Python automation."
             property="og:description"
           />
-        
         </Head>
 
         <Stack

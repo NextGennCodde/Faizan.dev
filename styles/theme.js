@@ -2,12 +2,9 @@ import { theme as chakraTheme } from '@chakra-ui/react'
 import { extendTheme } from '@chakra-ui/react'
 import { createBreakpoints } from '@chakra-ui/theme-tools'
 
-// Fluid Typography.
-// font-size  = calc(ZZ + ((1vw - XX) * YY))
-// Where   XX = min_viewport / 100
-//         YY = 100 * (max_font_size - min_font_size) / (max_viewport - min_viewport)
-//            = 100 * font_size_difference / viewport_difference
-//         ZZ = Minimum font-size stated in REM
+// ─── FAIZAN KHALID PERSONAL BRAND DESIGN TOKENS ─────────────────────────────
+// Palette: Obsidian Black / Luxury Rose / Warm Neutral
+// Aligned with LinkedIn banner branding
 
 const config = {
   initialColorMode: 'dark',
@@ -22,75 +19,120 @@ const fluidType = (minFont, maxFont) => {
 }
 
 const colors = {
-  background: '#000000',
-  secondary: '#080808',
-  complement: '#FA934F',
-  displayColor: '#FFFFFF',
-  textPrimary: '#D1D5DB',
-  textSecondary: '#8F9094',
-  button1: '#3CCF91',
-  button2: '#F6A20E',
-  button3: '#5132BF',
-  borderColor: '#111111',
-  logoGrey: '#8F9094',
+  // Core surfaces
+  background:    '#141414',   // Primary Obsidian - matches banner bg
+  secondary:     '#1C1C1E',   // Raised card surface
+  tertiary:      '#232428',   // Badge / pill surface (exact banner token)
+
+  // Accent system - single accent only (skill.md rule)
+  accent:        '#D78D83',   // Luxury Rose - exact banner token
+  accentMuted:   '#C4746A',   // Pressed / active state
+
+  // Text hierarchy
+  displayColor:  '#E7E7E8',   // Near-white for headlines (banner bg color used as text)
+  textPrimary:   '#C8C4BE',   // Body copy - warm neutral
+  textSecondary: '#7A7370',   // Muted secondary text
+  warmNeutral:   '#E9E2D8',   // Warm paper / pill text
+
+  // UI Chrome
+  borderColor:   '#2A2825',   // Subtle border
+  borderAccent:  '#D78D83',   // Accent border on hover
+
+  // Legacy aliases kept so Chakra component refs don't break
+  complement:    '#D78D83',
+  button1:       '#D78D83',
+  button2:       '#C4746A',
+  button3:       '#D78D83',
+  logoGrey:      '#7A7370',
 }
 
 const fonts = {
   ...chakraTheme.fonts,
-  body: `'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'`,
-  heading: `'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'`,
-  Ubuntu: `'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif`,
+  // Outfit: clean geometric humanist sans - closest to Geist/Cabinet Grotesk available on Google Fonts
+  body:    `'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif`,
+  heading: `'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif`,
+  mono:    `'JetBrains Mono', 'Fira Code', 'Courier New', monospace`,
 }
 
 const breakpoints = createBreakpoints({
   base: '0em',
-  sm: '30em',
-  md: '48em',
-  lg: '80em',
-  xl: '80em',
+  sm:   '30em',
+  md:   '48em',
+  lg:   '80em',
+  xl:   '80em',
 })
 
 const Link = {
   baseStyle: {
-    color: '#3CCF91',
-    _hover: { textDecoration: 'none' },
-    _focus: { boxShadow: 'none' },
+    color: '#D78D83',
+    _hover:  { textDecoration: 'none', color: '#E9E2D8' },
+    _focus:  { boxShadow: 'none' },
   },
+}
+
+const Button = {
+  baseStyle: {
+    fontWeight: '500',
+    borderRadius: '8px',
+    _focus: { boxShadow: '0 0 0 2px #D78D83' },
+  },
+  variants: {
+    solid: {
+      bg: '#1C1C1E',
+      color: '#E9E2D8',
+      border: '1px solid #2A2825',
+      _hover: {
+        bg: '#232428',
+        borderColor: '#D78D83',
+      },
+      _active: { bg: '#2A2825' },
+    },
+    ghost: {
+      color: '#C8C4BE',
+      _hover: { bg: 'rgba(215,141,131,0.08)', color: '#E9E2D8' },
+    },
+  },
+  defaultProps: { variant: 'solid' },
 }
 
 const overrides = {
   ...chakraTheme,
-  components: {
-    Link,
-  },
+  components: { Link, Button },
   config,
   colors,
   fonts,
   breakpoints,
   fontWeights: {
     normal: 300,
-    medium: 600,
-    bold: 700,
+    medium: 500,
+    bold:   700,
   },
   fontSizes: {
-    //   xs: fluidType(6, 12),
-    //   sm: fluidType(7, 14),
-    //   md: fluidType(8, 16),
-    //   lg: fluidType(9, 18),
-    //   xl: fluidType(10, 20),
-    //   '2xl': fluidType(12, 24),
-    //   '3xl': fluidType(14, 28),
-    //   '4xl': fluidType(18, 36),
-    //   '5xl': fluidType(20, 40),
-    //   '6xl': fluidType(24, 48),
-    //   '7xl': fluidType(32, 64),
-    //   '8xl': fluidType(36, 72),
-    display: fluidType(80, 144),
+    display:  fluidType(80, 128),
     display2: fluidType(24, 36),
-    display3: fluidType(16, 24),
+    display3: fluidType(16, 22),
+  },
+  styles: {
+    global: {
+      html: {
+        scrollBehavior: 'smooth',
+      },
+      body: {
+        bg: '#141414',
+        color: '#C8C4BE',
+      },
+      '::selection': {
+        background: 'rgba(215,141,131,0.25)',
+        color: '#E9E2D8',
+      },
+      // Smooth scrollbar
+      '::-webkit-scrollbar': { width: '6px' },
+      '::-webkit-scrollbar-track': { bg: '#141414' },
+      '::-webkit-scrollbar-thumb': { bg: '#2A2825', borderRadius: '3px' },
+      '::-webkit-scrollbar-thumb:hover': { bg: '#D78D83' },
+    },
   },
 }
 
 const customTheme = extendTheme(overrides)
-
 export default customTheme

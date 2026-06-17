@@ -1,11 +1,11 @@
 import {
-  Link,
   Stack,
   Heading,
   Text,
   SimpleGrid,
   Flex,
   Box,
+  Link,
 } from '@chakra-ui/layout'
 import NextLink from 'next/link'
 import Cards from './Card'
@@ -14,63 +14,59 @@ import ReactGA from 'react-ga4'
 
 export default function FeaturedProjects({ projects }) {
   const handleClick = (event) => {
-    ReactGA.event({
-      category: 'click',
-      action: event,
-    })
+    ReactGA.event({ category: 'click', action: event })
   }
 
   return (
-    <>
-      <Stack spacing={8} w="full">
-        <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={16}>
-          <SlideUpWhenVisible threshold={0.1}>
+    <Box id="work" w="100%">
+      <Stack spacing={12} w="full">
+        {/* Section header */}
+        <SlideUpWhenVisible threshold={0.1}>
+          <Flex
+            direction={{ base: 'column', md: 'row' }}
+            align={{ base: 'flex-start', md: 'flex-end' }}
+            justify="space-between"
+            gap={4}
+          >
             <Stack spacing={1}>
-              <Stack
-                isInline
-                alignItems="center"
-                justifyContent="space-between"
+              <Text
+                fontSize="13px"
+                fontWeight="600"
+                color="#D78D83"
+                letterSpacing="0.1em"
+                textTransform="uppercase"
               >
-                <Heading
-                  color="displayColor"
-                  fontFamily="Ubuntu"
-                  fontSize={{ base: 'xl', md: '2xl' }}
-                >
-                  Some of My Client Works.
-                </Heading>
-                <NextLink passHref href="/projects">
-                  <Link
-                    onClick={() => handleClick('featuredprojects_explore more')}
-                  >
-                    <Text
-                      _hover={{ color: 'button2' }}
-                      color="button1"
-                      display={{ base: 'block', md: 'none' }}
-                      fontSize={{ base: 'sm', md: 'xl' }}
-                    >
-                      {' '}
-                      Explore more &rarr;
-                    </Text>
-                  </Link>
-                </NextLink>
-              </Stack>
-              <Text color="textSecondary" fontSize={{ base: 'md', md: 'xl' }}>
-                Here's some of my Client Work that I have worked on.
+                Selected work
               </Text>
-              <NextLink href="/projects">
-                <Link
-                  onClick={() => handleClick('featuredprojects_explore more')}
-                >
-                  <Text
-                    display={{ base: 'none', md: 'block' }}
-                    fontSize={{ base: 'md', md: 'xl' }}
-                  >
-                    Explore more &rarr;
-                  </Text>
-                </Link>
-              </NextLink>
+              <Heading
+                color="#E7E7E8"
+                fontWeight="700"
+                fontSize={{ base: 'xl', md: '2xl' }}
+                letterSpacing="-0.5px"
+              >
+                Client projects I&apos;ve shipped.
+              </Heading>
+              <Text color="#7A7370" fontSize={{ base: 'sm', md: 'md' }}>
+                Real stores. Real traffic. Real results.
+              </Text>
             </Stack>
-          </SlideUpWhenVisible>
+            <NextLink passHref href="/projects">
+              <Link
+                onClick={() => handleClick('featuredprojects_explore more')}
+                fontSize={{ base: 'sm', md: 'md' }}
+                color="#D78D83"
+                _hover={{ color: '#E9E2D8' }}
+                transition="color 0.2s"
+                whiteSpace="nowrap"
+              >
+                All projects &rarr;
+              </Link>
+            </NextLink>
+          </Flex>
+        </SlideUpWhenVisible>
+
+        {/* Project grid - equal height cards via fixed image zone */}
+        <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={6} alignItems="stretch">
           <SlideUpWhenVisible>
             {projects && projects[0] && (
               <Cards
@@ -83,21 +79,21 @@ export default function FeaturedProjects({ projects }) {
               />
             )}
           </SlideUpWhenVisible>
+
           <SlideUpWhenVisible>
             {projects && projects[1] && (
-              <Box mt={{ md: '-50%' }}>
-                <Cards
-                  slug={projects[1].fields.slug}
-                  desc={projects[1].fields.description}
-                  imageURL={projects[1].fields.imageUrl}
-                  tag={projects[1].fields.tags}
-                  title={projects[1].fields.title}
-                  deployLink={projects[1].fields.deployLink}
-                />
-              </Box>
+              <Cards
+                slug={projects[1].fields.slug}
+                desc={projects[1].fields.description}
+                imageURL={projects[1].fields.imageUrl}
+                tag={projects[1].fields.tags}
+                title={projects[1].fields.title}
+                deployLink={projects[1].fields.deployLink}
+              />
             )}
           </SlideUpWhenVisible>
-          <SlideUpWhenVisible threshold={0.8}>
+
+          <SlideUpWhenVisible threshold={0.6}>
             {projects && projects[2] && (
               <Cards
                 slug={projects[2].fields.slug}
@@ -109,22 +105,21 @@ export default function FeaturedProjects({ projects }) {
               />
             )}
           </SlideUpWhenVisible>
+
           <SlideUpWhenVisible>
             {projects && projects[3] && (
-              <Box mt={{ md: '-50%' }}>
-                <Cards
-                  slug={projects[3].fields.slug}
-                  desc={projects[3].fields.description}
-                  imageURL={projects[3].fields.imageUrl}
-                  tag={projects[3].fields.tags}
-                  title={projects[3].fields.title}
-                  deployLink={projects[3].fields.deployLink}
-                />
-              </Box>
+              <Cards
+                slug={projects[3].fields.slug}
+                desc={projects[3].fields.description}
+                imageURL={projects[3].fields.imageUrl}
+                tag={projects[3].fields.tags}
+                title={projects[3].fields.title}
+                deployLink={projects[3].fields.deployLink}
+              />
             )}
           </SlideUpWhenVisible>
         </SimpleGrid>
       </Stack>
-    </>
+    </Box>
   )
 }
