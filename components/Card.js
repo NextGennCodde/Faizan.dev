@@ -22,7 +22,7 @@ import {
 import useMediaQuery from '../hook/useMediaQuery'
 import Image from 'next/image'
 
-export default function Cards({ imageURL, title, slug, desc, tag, deployLink, imageHeight = '350px' }) {
+export default function Cards({ imageURL, title, slug, desc, tag, deployLink, imageHeight = { base: '250px', md: '350px' } }) {
   const getTag = (tag) => {
     const map = {
       'React':              ['#D78D83', FaReact],

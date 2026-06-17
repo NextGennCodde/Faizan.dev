@@ -40,16 +40,21 @@ export default function Navbar({ enableTransition }) {
         <DrawerCloseButton color="#C8C4BE" />
         <DrawerHeader borderBottomWidth="1px" borderColor="#2A2825">
           <Text
-            fontSize="xl"
-            fontWeight="700"
-            letterSpacing="-0.5px"
-            color="#E7E7E8"
-          >
-            FK
-            <Box as="span" color="#D78D83" ml="2px">
-              .
-            </Box>
-          </Text>
+              fontSize="22px"
+              fontWeight="700"
+              letterSpacing="-0.5px"
+              color="#E7E7E8"
+              cursor="pointer"
+              _hover={{ color: '#E9E2D8' }}
+            >
+              <Box as="span" color="#D78D83" ml="1px">
+                {'{'}
+              </Box>
+             &nbsp;F&nbsp;
+              <Box as="span" color="#D78D83" ml="1px">
+                {'}'}
+              </Box>  
+            </Text>
         </DrawerHeader>
         <DrawerBody>
           <Stack spacing="8px" pt={4}>
