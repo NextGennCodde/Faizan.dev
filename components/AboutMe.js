@@ -153,7 +153,7 @@ export default function AboutMe() {
                 objectPosition="top"
                 borderRadius="10px"
                 alt="Faizan Khalid"
-                src="/personal.png"
+                src="/personal.jpg"
               />
             </Box>
           </Flex>
